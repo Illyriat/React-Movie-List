@@ -1,11 +1,12 @@
 import React from "react";
 
-const Movies = ({name, children}) => {
-    return ( 
-        <>
-            <h4><a href={children}>{name}</a></h4>
-        </>
-     );
-}
- 
+const Movies = ({ name, url }) => {
+    return (
+        <tr>
+            <td>{name}</td>
+            <td><a href={url} target="_blank" rel="noopener noreferrer">View on IMDB</a></td>
+        </tr>
+    );
+};
+
 export default Movies;

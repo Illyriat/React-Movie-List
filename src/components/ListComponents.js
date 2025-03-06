@@ -1,22 +1,24 @@
 import React from "react";
 import Movies from "./Movies";
 
-
-const ListComponent = ({movies}) => {
-
-    const movieNodes = movies.map(movie => {
-        return (
-            <Movies name={movie.name} key={movie.id}>{movie.url}</Movies>
-          );
-        });
-
-    return(
-        <div>
-            {movieNodes}
+const ListComponent = ({ movies }) => {
+    return (
+        <div className="movie-table-container">
+            <table className="movie-table">
+                <thead>
+                    <tr>
+                        <th>Movie Title</th>
+                        <th>More Info</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {movies.map(movie => (
+                        <Movies key={movie.id} name={movie.name} url={movie.url} />
+                    ))}
+                </tbody>
+            </table>
         </div>
-    )
-
+    );
 };
-
 
 export default ListComponent;

@@ -1,11 +1,10 @@
 import React, {useState} from "react";
 import ListComponent from '../components/ListComponents';
-import Movies from '../components/Movies';
 
 
 const MovieContainer = () => {
 
-    const [movies, setMovies] = useState(
+    const [movies] = useState(
         [
             {
               id: 1,
@@ -37,7 +36,7 @@ const MovieContainer = () => {
         <>
             <h1>Movie Release List</h1>
             <ListComponent movies={movies} />
-            <h2> <a href="https://www.imdb.com/calendar/?region=gb">Upcoming Movies</a></h2>
+            <h2> <a href="https://www.imdb.com/calendar/?region=gb" rel="noreferrer" target="_blank">Upcoming Movies</a></h2>
         </>
      );
 }
